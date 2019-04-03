@@ -1,19 +1,23 @@
 {
-    "name": "todoList",
-    "version": "1.0.0",
-    "main": "server/app.js",
-    "dependencies": {
-        "express": "~4.13.0",
-        "body-parser": "~1.5.0",
-        "lodash": "~2.4.1",
-        "gulp": "^3.9.0"
-    },
-    "devDependencies": {},
-    "engines": {
-        "node": ">=0.10.0"
-    },
-    "scripts": {
-        "start": "node server/app.js"
-    },
-    "private": true
+  "name": "todoList",
+  "version": "1.0.0",
+  "main": "server/app.js",
+  "dependencies": {
+    "express": "~4.16.0",
+    "body-parser": "~1.17.1",
+    "lodash": "~4.17.11",
+    "gulp": "^4.0.0",
+    "snyk": "^1.147.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "start": "node server/app.js",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "private": true,
+  "snyk": true
 }
